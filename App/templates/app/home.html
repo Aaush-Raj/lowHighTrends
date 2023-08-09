@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Low High Trends</title>
+    <link rel="stylesheet" href="../App/static/app/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+
+    <form action="{% url 'logout' %}" method="post" style="display: flex; justify-content: space-between; align-items: center;">
+      {% csrf_token %}
+      <h3 style="text-align: center; flex: 1; font-family:Franklin Gothic Medium	;">LPL LPH STRATEGY!</h3>
+      <button style="margin-left: 10px;">Logout</button>
+      <a id="userDetailsBtn" href="{% url 'user_details' %}" style="margin-left: 10px;">user Details</a>
+  </form>
+  
+
+    <div class="container">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="d-flex form-group">
+          <label for="strategyStatus">Strategy Status</label>
+          <select id="strategyStatus" name="strategyStatus">
+            <option value="ACTIVE">ACTIVE</option>
+            <option value="INACTIVE">INACTIVE</option>
+          </select>
+  
+          <label for="selectedInstrument">INSTRUMENT:</label>
+          <select id="selectedInstrument" name="selectedInstrument">
+            <option value="NIFTY 50">NIFTY</option>
+            <option value="NIFTY BANK">BANKNIFTY</option>
+            <option value="NIFTY FIN SERVICE">FINNIFTY</option>
+          </select>
+        </div>
+  
+        <div class="d-flex form-group">
+          <label for="triggerLevel">Trigger Level:</label>
+          <input type="number" id="triggerLevel" name="triggerLevel" required />
+        </div>
+  
+        <div class="d-flex form-group">
+          <label for="stoploss">STOPLOSS:</label>
+          <input type="number" id="stoploss" name="stoploss" step="any" required />
+          <label for="stoploss">LOTS:</label>
+          <input type="number" id="lots" name="lots" required value="1" />
+        </div>
+  
+        <div class="d-flex form-group">
+          <label for="selectedFeature">Select Feature:</label>
+          <select id="selectedFeature" name="selectedFeature">
+            <option value="LPL">LPL</option>
+            <option value="LPH">LPH</option>
+          </select>
+        </div>
+  
+        <div>
+          <h5><span class="span">STATUS:</span> {{status}}</h5>
+        </div>
+
+        <div class="form-group">
+          <button
+            type="button"
+            onclick="openStopModal()"
+            id="stopButton"
+            {% comment %} class="btn btn-secondary" {% endcomment %}
+            data-dismiss="modal"
+          >
+            Stop
+          </button>
+          <button type="button" onclick="openStartModal()" id="startButton">
+            Start
+          </button>
+        </div>
+        <!-- Start Modal -->
+        <div class="modal" id="startModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Start Confirmation</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to start?</p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <input 
+                  type="submit"
+                  class="btn btn-primary"
+                  onclick="startFunction()"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stop Modal -->
+        <div class="modal" id="stopModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Stop Confirmation</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to stop?</p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <a class="btn btn-danger" href="{% url 'stop_strategy' %}">Click here to stop the strategy</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      function openStartModal() {
+        $("#startModal").modal("show");
+        console.log("START CLICKED");
+      }
+
+      function openStopModal() {
+        $("#stopModal").modal("show");
+      }
+
+      function closeModals() {
+        $("#startModal").modal("hide");
+        $("#stopModal").modal("hide");
+      }
+    </script>
+
+
+  </body>
+</html>

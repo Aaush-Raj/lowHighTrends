@@ -1,0 +1,101 @@
+/* Reset and general styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Add a background color for better visibility */
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Add border-radius to create rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+  }
+  
+  /* Form header styles */
+  .title {
+    text-align: center;
+    color: #333; /* Add a color for the form header */
+  }
+  
+  /* Form description styles */
+  .description {
+    text-align: center;
+    color: #666; /* Add a color for the form description */
+  }
+  
+  /* Input styles */
+  .input {
+    width: 94%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Add border-radius for rounded input edges */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Add inset box shadow for a subtle effect */
+    font-family: inherit;
+    font-size: 14px; /* Set the font size for better readability */
+  }
+  
+  /* Checkbox styles */
+  label {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  /* Buttons styles */
+  .clearfix {
+    overflow: auto;
+  }
+  
+  .cancelbtn {
+    float: left;
+    width: 48%;
+    background-color: #f44336;
+    margin-right: 2px;
+    color: white;
+    padding: 12px 20px; /* Increase padding for larger buttons */
+    border: none;
+    border-radius: 5px; /* Add border-radius for rounded buttons */
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  .cancelbtn:hover {
+    opacity: 1;
+  }
+  
+  
+  .signupbtn:hover {
+    opacity: 5;
+  }
+  
+  .signupbtn {
+    float: left;
+    width: 48%;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px; /* Increase padding for larger buttons */
+    border: none;
+    border-radius: 5px; /* Add border-radius for rounded buttons */
+    cursor: pointer;
+    opacity: 0.9;
+    margin-left: 2px;
+  }  
+
+  
+/* Red box style for validation errors */
+.has-error {
+  border: 1px solid red;
+  /* Add any other styles you want for the red box */
+}
+
+/* Error message styles */
+.error-message {
+  color: red;
+  font-size: 12px;
+  /* Add any other styles for the error message */
+}

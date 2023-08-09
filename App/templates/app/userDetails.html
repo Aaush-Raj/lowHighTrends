@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../App/static/app/login.css" />
+
+
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <h1>USER DETAILS</h1>
+            <h3>Current user :: {{user_id}}</h3>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="apiKey">ApiKey:</label>
+            <input type="apiKey" id="apikey" name="apiKey" required>
+            <br>
+            <input type="submit" value="Update details">
+        {% comment %} <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p> {% endcomment %}
+        </form>
+    </div>
+</body>
+</html>

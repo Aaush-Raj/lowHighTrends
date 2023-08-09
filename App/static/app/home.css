@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  /* Responsive CSS for mobile devices */
+  @media screen and (max-width: 400px) {
+    .container {
+      max-width:0;
+      padding: 10px;
+    }
+    
+    input[type="number"],
+    select {
+      font-size: 16px;
+      width: 100%;
+      height: 100%;
+    }
+    
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
+  
+  form{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius:5px;
+    padding:15px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+
+
+  .modal-header{
+    background-color:black;
+    color: white;
+}
+
+#exampleModalLabel{
+    font-weight: bold;
+    color:grey;
+}
+
+.trail_title{
+    width: 500px;
+
+    padding-top: 6px;
+    padding-left: 61px;
+    padding-right: 82px;
+    font-weight: 500;
+    background-color: gainsboro;
+}
+.trail_sl_input{
+    width: 55px !important;
+    border-radius: 5px !important;
+    /* height: 39.5px !important; */
+    /* margin-left: 10px !important; */
+    
+}
+/* 
+#trail_x_type, #trail_y_type{
+    width: 61px !important;     
+    margin-left: 10px;
+    height: 39.5px;
+} */
+
+
+
+.container {
+  max-width: 40% !important; 
+  margin: 0 auto !important;
+}
+
+#stopButton{
+  background-color:rgba(255, 0, 0, 0.733);
+  border-radius: 5px;
+}
+
+#startButton{
+  background-color:rgb(69, 210, 69);
+  border-radius: 5px;
+
+}
+.span{
+  /* background-color: #676464ba; */
+  font-weight: bold !important;
+}
+
+#userDetailsBtn{
+  background-color: #0043ffb3;
+  color: white;
+  padding: 9px;
+}

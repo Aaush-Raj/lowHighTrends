@@ -1,0 +1,113 @@
+/* Reset styles to ensure consistency across browsers */
+body, h1, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a background color for the page */
+  body {
+    background-color: #f7f7f7;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Center the login form vertically and horizontally */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style the login form container */
+  form {
+    width: 320px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a proper box shadow */
+  }
+  
+  /* Style the h1 heading */
+  h1 {
+    font-family: "Georgia", serif;
+    font-size: 32px;
+    font-weight: bold; /* Use bold fonts for labels */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the labels and inputs */
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  
+  /* Increase width for the input fields */
+  #username, #password , #apikey {
+    width: calc(100% - 28px); /* Adjust width to remove unnecessary space */
+  }
+  
+  /* Style the submit button */
+  input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 14px 20px; /* Add more padding to the button */
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the link for sign up */
+  p a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+
+  
+  
+/* Style error messages */
+.form-errors {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #ff0000; /* Set the color for error messages to red */
+  }
+  
+  .form-errors li {
+    margin-bottom: 6px;
+  }
+  
+  /* Highlight inputs in red when there are errors */
+  .form-control.error {
+    border-color: #ff0000; /* Set border color to red */
+  }
+  
+  /* Show error message below the input */
+  .form-control.error + .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  

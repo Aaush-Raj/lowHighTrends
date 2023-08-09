@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="../App/static/app/signup.css" />
+    </head>
+<body>
+  <form class="form" method="post">
+    {% csrf_token %}
+    <div class="container">
+      <h1 class="title">Sign Up</h1>
+      <p class="description">Please fill in this form to create an account.</p>
+      {% if error_message %}
+      <div class="error-message">{{ error_message }}</div>
+      {% endif %}
+      <hr>
+
+      <label for="username"><b>Username:</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required class="input {% if error_message %}has-error{% endif %}">
+      
+
+      <label for="email"><b>Email:</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required class="input {% if error_message %}has-error{% endif %}">
+      
+
+      <label for="psw"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" name="password1" required class="input {% if error_message %}has-error{% endif %}">
+      
+
+      <label for="psw-repeat"><b>Repeat Password:</b></label>
+      <input type="password" placeholder="Repeat Password" name="password2" required class="input {% if error_message %}has-error{% endif %}">
+      
+
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
+    
