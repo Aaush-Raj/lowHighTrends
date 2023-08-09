@@ -11,8 +11,7 @@ from threading import Thread
 
 @login_required
 def home(request):
-    # client = pymongo.MongoClient("mongodb+srv://aaush:AaushMongoTestAccount@gopassive.niccs6s.mongodb.net/?retryWrites=true&w=majority")
-    client = pymongo.MongoClient("mongodb+srv://aayush_gp:3yYfnXZVJZHvdu98@internal.ilq0ndz.mongodb.net/?retryWrites=true&w=majority")
+    client = pymongo.MongoClient("mongodb+srv://aaush:AaushMongoTestAccount@gopassive.niccs6s.mongodb.net/?retryWrites=true&w=majority")
 
     db = client['lowHighTrends']
     collection = db['inputData']
