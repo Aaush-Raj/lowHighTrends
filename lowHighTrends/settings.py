@@ -127,6 +127,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+# Set the LOGIN_REDIRECT_URL to redirect authenticated users after login
+LOGIN_REDIRECT_URL = '/'
+
+# Set the LOGIN_URL to the desired login page URL
+LOGIN_URL = '/login/'
+
 
 #CELERY SETTINGS
 
